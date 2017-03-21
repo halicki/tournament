@@ -1,7 +1,9 @@
 # Tournament
 
 ## Setup
-Depending on your system, setup process would be different. Please find below instructions how to setup system.
+Depending on your system, setup process would can differ. Please find below instructions how to setup system.
+
+The project needs Python 3.6 and PostgreSQL.
 
 1. Install and configure PostgreSQL
 
@@ -30,11 +32,32 @@ Depending on your system, setup process would be different. Please find below in
 
 2. Optional: Setup virtualenv
 
-   I marked this part optional, but in my opinion it should be mandatory.
+   I marked this part optional, but in my opinion it should be mandatory. It will sparate your host packages from this 
+   project requirements.
 
-       virtualenv --python=python3.6 venv
+   You can choose from:
+
+   * Install `virtualenv`:
+
+         virtualenv --python=python3.6 venv
+
+   * or use built in module `venv`:
+
+         python3 -m venv venv
+
+    Now you can activate your newly created virtual environment:
+
        . venv/bin/activate
+
 
 3. Install required python packages 
 
        pip install -r requirements.txt
+
+4. Run tests!
+
+       python tournament_test.py
+
+## License
+
+This  repository can be distributed in accordance to MIT License.
